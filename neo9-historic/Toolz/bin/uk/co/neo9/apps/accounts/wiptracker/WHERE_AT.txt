@@ -1,0 +1,114 @@
+
+// ================= October 2012 ==================
+
+Forecaster App & Component
+
+- idea is to introduce forecasted payments in to the mix so I can get an idea of how much income is left 
+
+How the data hangs together
+
+ - 
+
+
+ // ================ CLASS DEtaILS =================
+
+
+*Components - these are the functional building blocks
+*App 		- the applications
+
+
+WIPTrackerTotalsGeneratorApp
+----------------------------
+
+- reads in a WIPTracker monthly spreadsheet, to a totals grid
+- validates the data for completeness
+- writes out the category totals
+
+
+
+WIPTrackerUpdateCheckerApp
+--------------------------
+
+- read in the monthly sheets from the main tracker as GRIDS
+- read each WIPTrackerTotals monthly spreadsheet as GRIDS
+- use the GRID compare functionality to spot changes
+- output in some suitable form!
+
+
+
+WIPTrackerAnalyserApp
+----------------------
+
+- loads a specific category from the 12 months and outputs the details for easy analysis
+
+
+
+*********** and the main functions **************
+
+* loading up the data grid from a WIPTracker monthly transaction sheets
+---------------> WIPTrackerTotalsGeneratorComponent
+
+
+* the set of categories are built up in: 
+---------------> WIPTrackerTotalsGeneratorComponent
+
+=============================================================================================
+
+WIPTracker - October 2011
+
+* want to bring the sub-cat into the code properly now so that 2012 can begin on time
+  and 2011 can be retro-analysed if possible
+
+.... so, as it is component based, look first at reading in the data and make sure 
+there's a place holder for sub-cat
+
+
+
+
+
+=============================================================================================
+
+
+WIPTracker - June 2011
+
+Well... this has now turned into it's very own little suite! Of course, it's not complete yet!
+
+So, what we aim to cover is:
+
+> read a monthly WIPTracker & convert to categorised, joint models
+> produce the output for putting into the main Tracker spreadsheet
+> utility - compare monthly WIPTracker to main Tracker to spot modifications
+> utility - analyse joint models to better understand the financials
+
+So there are a number of functional areas there with overlapping technical needs. For this reason,
+I've strated refactoring the code to component based - so core components for the load from the
+two kinds of spreadsheet, for the output, etc - and then apps that put the components together
+to perform those functions listed above. 
+
+THIS REFACTORING HAS ONLY JUST BEGUN!!!!
+
+The code currently is pretty mcuh in a single heirarchy for the components which I think could break
+easily. Because of this I've created a BASE component which I want to put the common stuff and then
+break the components out into a tree. Currently it is:
+
+BASE > TotalsGenerator > Analyser > UpdateChecker
+
+It may be a case that components re-use each other rather than apps have more than one component...
+.. that will pan out!
+
+The true test will be to get the analyser to work again because I think it's re-using the axis 
+details when it shouldn't.
+
+
+
+A word about the Grid Container
+===============================
+
+This is working - with an x and a y axis - but not all intended scenarios are covered, I expect. I would like to 
+check that a simple String usage without need for wrappers etc is still possible.
+
+Also need to better define the output capabilities and how they are made generic. Currently it's using 'labels' 
+in upper case as lookup values... this means that a 'pretty output' is now not possible... need to have a proper
+label lookup capability for the output too.
+
+

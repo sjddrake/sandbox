@@ -1,0 +1,7 @@
+What this is
+
+Budget is a model for capturing the monthly (initially) totals that the Trackers use.
+It will be used as the baseline against which the actuals from the WIP Trackers can be judged
+The idea is that eventually it can be built up via "rules" so that it becomes user-specifiable
+Initially I'll just replicate the ammounts I have in the WIPs
+I could build a simple CSV loader for it or even a hardcoded factory for initial use

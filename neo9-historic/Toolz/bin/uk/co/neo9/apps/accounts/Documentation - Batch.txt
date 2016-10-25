@@ -1,0 +1,46 @@
+
+IDEAS / TO DO
+
+- would like to wrap up all the various tools & modes in a GUI :-)
+
+
+2012
+
+ - at last, the batch processing will now take any input file and process it accordingly
+ - the actual component still called the CreditCardBatchProcessor though it does all files now
+ - BUT there's a runner class to point it at a folder which is named accordingly:
+ 
+ 	> AccountsBatchProcessorRunner
+
+
+NOTE - the credit card reader uses the Command Pattern paradigm and runs in a whole different way
+See it's documentation file for how to run it
+
+
+October 2011 - Batch
+
+** run class AccountsDataReader with the "BATCHMODE" argument **
+
+OR
+
+** if it's in the workspace, hack AccountsDataReaderBatchModeRunner to suit the run **
+
+
+> improved the batch processing for account estat data files
+> only ran it from the workspace
+> the following hsould be noted:
+	> just put all the data files into a working directory & produce a list file of them
+	> the data files do NOT have to follow a nameing convention now but...
+		> use spaces to delimit the text in them
+		> inlcude the YEAR
+		> include the month (either in full or just 3 letter abr)
+		> if its NOT joint, need to put 'simon' in it
+	> ONLY did the account data files in a single batch at this time
+	
+NOTE: - didn't use the command pattern code... should really get that unified with the batch approach
+so, in other words, when I do a batch, the filename instances should produce a command... THEN should
+be able to do a mixed batch quite easily.
+
+ALSO... should allow the 'batch' approach to have simply process the contents of a directory... the 
+list file is still valid though in case you want to include files in other locations OR only use a 
+sub-set of the files in a given location.

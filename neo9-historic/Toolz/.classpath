@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src.toolz"/>
+	<classpathentry kind="src" path="test.toolz"/>
+	<classpathentry exported="true" kind="var" path="NEO9TESTING_JAR"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="NEO9_LIBEXT/jxl.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Utilities"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="var" path="NEO9ENV_JAR"/>
+	<classpathentry kind="var" path="NEO9_LIBEXT/joda-time-2.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/net/sf/supercsv/super-csv/2.3.1/super-csv-2.3.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/net/sf/supercsv/super-csv-dozer/2.3.1/super-csv-dozer-2.3.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/net/sf/dozer/dozer/5.4.0/dozer-5.4.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/jcl-over-slf4j/1.7.5/jcl-over-slf4j-1.7.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.9.1/commons-beanutils-1.9.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

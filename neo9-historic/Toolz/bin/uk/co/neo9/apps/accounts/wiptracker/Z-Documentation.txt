@@ -1,0 +1,93 @@
+
+September 2014 
+
+- As I look again at the accounts code, with a view of adding forecasting & making this my self-training aim,
+I will record here details so I can reference again in the future
+
+
+WIPTrackerTotalsGeneratorComponent
+
+> this loads the monthly spreadsheet I use to track payments and allocate to categories
+> THis is how it does it:
+
+> loadWIPTrackerTransactions(String wipTrackerFileName) <-- OR loadWIPTotalsIntoGrid(String worksheetFilename)
+	> loadWIPTrackerSheet
+	> extractModelsFromSheet(..) <-- returns List<WIPTrackerTotalsModel> worksheetAsModels
+	> it then collates the models
+	> finally returns all models in a WIPTrackerContainer
+	
+... the returned data in the WIPTrackerContainer is	
+	
+	
+ALSO see the JUnit WIPTrackerTotalsGeneratorTest for ways to get into it in the debugger, in particular:
+
+	> test_justRunIt
+	> test_extractStandardModelsFromSheet	
+	
+	
+Further Detail of The Load Steps - this is taken from WIPTrackerTotalsGeneratorComponent.loadWIPTotalsIntoGrid()
+
+	> 	extractModelsFromSheet() 
+		> reads the my monthly sheet of transactions and puts them into a list of transaction models
+		> the models include the category, which is just a string, amount and date
+		
+	>	validateModels
+		> this caters for incomplete entries in the spreadsheet
+		> also defaults the UNKNOWN category if it's not set
+		> LATER function <filterToValidModels() & checkJointCategories()> then filters out any transaction that this 
+		  component flags as invalid, 
+		  so that the totals produced are only for JOINT OUTGOINGS
+		
+	>	getSampleDateFromLoadedData
+		> gets hold of a date from the dataset for use later
+		
+*** AT THIS POINT IT GETS REALLY INTERESTING ***
+
+
+	> CollateItems() <-- takes a comparator, which is primed to use CATEGORY
+		> first orders the list of transactions
+		> then put all Transactions of the same CATEGORY into a container <>
+		> return all containers of same category in a list of containers
+	
+	
+The code has following comment after collation
+		
+		/**
+		 * CollatedModels - This is a List of WIPTrackerCategoryContainer.
+		 * There is 1 container per category: bills, food, etc
+		 * The container knows its category & contains a list of transaction total models
+		 * AT THIS POINT the categories can have MULTIPLE transaction models for the same category & day
+		 */	
+
+... so the code adds-up the disperate transactions on the same day as it wants a daily amount
+... and I'm not delving into that as it's not needed for what I'm doing at the moment!
+
+Having said that, the WIPTrackerCategoryContainer needs explaining... see later
+
+	> * NEXT - daily totals per category are now put into a GRID container for presentation logic *
+		> createGridLoader()
+			> * the grid Loader as a list of lists! *
+			> * each inner list (a row) is a category's 
+			> * at this point all the calendar days in a month are obtained and used *
+			> * a hash-key is generated of format: <cat_name>|<date_no_year>
+			> * the key is used to look for any existing category total record for that day in the passed in map
+			> * if it exists, it's put in the "row" array ... empty days are NOT added, surprisingly
+	> ** finally we have an array list of an array list per category which hold the existing daily category total
+	> create a new grid container instance <WIPTrackerTotalsGrid>
+	> set axis labels for the grid
+	> grid.loadGrid(gridLoader) --> grid.loadUnmatchedGridData(..)
+		> ** go look at the comments in the code ... it's generic and mind bending! **
+	
+	> grid.outputGrid() <-- finally called after its loaded (in this app component anyway)
+		> generic approach to getting the data outputed in the grid tabular form using the wrappers
+		> can see that there is no need to store anything in a "cell" that does not have an assocaited
+		  data entity because this method will output a default "null" presentation value 	
+
+
+WIPTrackerCategoryContainer Explanation
+
+	> helper used to generate the key for the map in the container
+	
+
+
+

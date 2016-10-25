@@ -1,0 +1,42 @@
+
+
+Update: Spreadsheet Tracker Output - 2009-12-07
+
+STARTING POINT:
+
+> single point of entry is AccountsDataReader
+> once it sorts out if its batch/single mode,
+> it reads in the file as lines
+> The lines are then set on models
+> The model type is determined by meta-data
+> the first & last line for a given model is also meta-data driven
+> the meta-data is obtained from the input file type
+> once all the file lines have been assigned to models,
+> the models are sorted (? for date descending?)
+> then the models process & output the raw text lines in one call
+> the output() call stores the transaction data in the model instance fields
+> and then loads a StringBuffer with the field data in order
+> the StringBuffer returns a String line for the transaction
+> the output line is stored in an ArrayList
+> the ArrayList is finally written out to a text file
+
+Voila!!!
+
+
+THE UPDATE WILL:
+
+
+
+
+
+-------------- OLD ----------------------
+
+- the output is currently created like this:
+
+> AccountsDataReader.AccountsData gets loaded with the data lines
+> when output() is called upon it, it processes the raw data lines
+> processed data gets set in the instance fields
+> finally all instance fields get written in order to a StringBuffer
+
+=> need to determine what type of output is required & 
+the simply change the order... if I hadn't re-written the application, that is!!!

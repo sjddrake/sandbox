@@ -1,0 +1,85 @@
+Ok... so found this old project that I had started so kind of going with what's there
+
+I've done a lot of thinking since but have lost the paper!
+
+So we'll grow this organically.... which is what I was trying to avoid - doh!
+
+
+NOTES:
+
+-- Payment --
+
+
+Entity - analogous to an entry in WIP or a Bank Statement - it's the transaction
+
+
+relationships:
+
+- has Breakdowns... the allocation of its amount to categories
+- is from an Account ... eg Joint Account, Credit Card... optional as could be cash!
+- has a PaymentMethod ... checque, cash, etc
+
+
+
+--- PaymentBreakdown ---
+
+Entity - the key to everything! Relates an amount from a payment to a category of spending; this is what we track
+
+relationships:
+
+- main category (thinking this should not be instantiated for performance reasons)
+- sub cat 
+
+
+-- Category ---
+
+Entity - from the WIPs, ties in to a budget... gives us our total spending for a period
+... though its not really an Entity in its own right once its setup - it doesn't have behaviour?
+... it is a characteristic of a Breakdown
+
+relationships:
+
+- a breakdown is assigned to (well, marked against) a main category & a sub category
+- the Category entity can model this parent-child relationship and the breakdowns can be validated against but that's nice to have
+- for now will just assign a category instance an id and use that id against breakdown
+
+
+
+REmember... the budget is an amount for a given category IN A GIVEN TIME FRAME
+... not that budget is part of this stage of development!
+
+
+
+
+
+Plan of attack
+--------------
+
+- model the storage of Payments in the DB
+- effectively setup an empty WIP from the raw statement entries, just as I would in Excel
+- "setup" means creating the initial relationships including an unassigned budget & breakdown
+- go on to manipulate the entity instances in the way that I would do in a WIP spreadsheet and thrash out the capabilities
+- look at what MI can get out of the data VIA DB querying instead of JAVA
+
+
+Discrete things:
+
+- create the category graph
+- load in a payment and intialise it as an entity
+- handle splitting a payment across breakdowns... and owners
+
+
+Next Phase
+
+- link in Budgets
+- smart allocations of payments
+
+
+CROSS-CUTTING
+
+- need to establish a good approach to using Hibernate... the simple example code doesn't seem to do that!
+.... refer to Which codeset????
+.... though I think I should use the JPA version of things!... and latest version of Hibernate release!!!!
+
+
+

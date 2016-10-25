@@ -1,0 +1,16 @@
+Documentation - Credit Card
+
+How to run:
+
+Use CreditCardBatchProcessorRunner
+
+	- this reads the contents of the working folder so doesn't take a list file as input
+	- it does need a certain amount of naming convention to the data fiels
+	- another way of doing 'batch' is just to have multiple months of transactions in the same txt file! :-)
+
+** 2012 **
+
+The adobe scrape is the last one that I worked on
+
+It does work but if the pdf wont do a full line in one go, have to re-constitute the columns
+in a spready and save the text from there. REMEMBER to text replace any tabs for spaces!
