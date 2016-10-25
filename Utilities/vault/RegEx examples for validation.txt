@@ -1,0 +1,100 @@
+01/04/2011 13:28:53
+Search String: regex
+Replace String: 
+Path: D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\
+File Mask: *.java
+Search Subdirectories
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Address\src\com\lloydstsb\ssp\coa\address\helpers\service\integration\AddressHelper.java
+Line  16 - import java.util.<regex>.*;
+Found 1 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Address\src\com\lloydstsb\ssp\coa\address\jsf\mpb\CaptureAddressDataHelper.java
+Line  13 - import com.lloydstsb.ssp.coa.common.constants.Validation<Regex>Constants;
+Line 433 -   if (text != null && !text.matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)) {
+Line 433 -   if (text != null && !text.matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)) {
+Found 3 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Address\src\com\lloydstsb\ssp\coa\address\jsf\mpb\PAFAddressSearchManagePageBean.java
+Line  32 - import com.lloydstsb.ssp.coa.common.constants.Validation<Regex>Constants;
+Line 286 -     if ( (!getInboundPostCode().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX))
+Line 286 -     if ( (!getInboundPostCode().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>))
+Line 287 -     || (!getOutboundPostCode().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)) ) {
+Line 287 -     || (!getOutboundPostCode().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)) ) {
+Line 362 -    if (!getHouseName().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line 362 -    if (!getHouseName().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line 372 -    if ( (!getOutboundPostCode().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX))
+Line 372 -    if ( (!getOutboundPostCode().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>))
+Line 373 -    || (!getInboundPostCode().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)) ){
+Line 373 -    || (!getInboundPostCode().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)) ){
+Found 11 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Address\src\com\lloydstsb\ssp\coa\address\jsf\mpb\PostcodeUtils.java
+Line   9 - import java.util.<regex>.Matcher;
+Line  10 - import java.util.<regex>.Pattern;
+Found 2 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Address\src\com\lloydstsb\ssp\coa\address\jsf\mpb\UnstructuredAddressManagePageBean.java
+Line  17 - import com.lloydstsb.ssp.coa.common.constants.Validation<Regex>Constants;
+Found 1 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\COAUtilities\agitar\test\com\lloydstsb\chordiant\coa\helpers\TokenFormatterTest.java
+Line  13 - import java.util.<regex>.Matcher;
+Line  14 - import java.util.<regex>.Pattern;
+Line  15 - import java.util.<regex>.PatternSyntaxException;
+Found 3 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\COAUtilities\src\com\lloydstsb\chordiant\coa\helpers\TokenFormatter.java
+Line   9 - import java.util.<regex>.Matcher;
+Line  10 - import java.util.<regex>.Pattern;
+Found 2 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Common\src\com\lloydstsb\ssp\coa\common\constants\ValidationRegexConstants.java
+Line  15 - public class Validation<Regex>Constants {
+Line  17 -  public static String INVALID_CHARS_<REGEX> = "[^£]*";
+Found 2 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Servicing\src\com\lloydstsb\ssp\coa\servicing\jsf\mpb\CaptureContactDetailsManagePageBean.java
+Line  28 - import com.lloydstsb.ssp.coa.common.constants.Validation<Regex>Constants;
+Line  58 -  private static final String NUMBERS_ONLY_<REGEX> = "[0-9]*";
+Line  59 -  private static final String EMAIL_<REGEX> = "^.+@[^\\.].*\\.[a-z]{2,}$";
+Line  60 -  private static final String NUMBERS_AND_SPACES_ONLY_<REGEX> = "(\\d|(\\d ))*";
+Line 254 -   } else if (getAmendedHomeNumber() != null && getAmendedHomeNumber().length() != 0 && !getAmendedHomeNumber().matches(NUMBERS_AND_SPACES_ONLY_<REGEX>)) {
+Line 274 -   } else if (getAmendedWorkNumber() != null && getAmendedWorkNumber().length() > 0 && !getAmendedWorkNumber().matches(NUMBERS_AND_SPACES_ONLY_<REGEX>)) {
+Line 281 -   if (getAmendedWorkExtensionNumber() != null && getAmendedWorkExtensionNumber().length() > 0 && !getAmendedWorkExtensionNumber().matches(NUMBERS_ONLY_<REGEX>)) {
+Line 300 -   } else if (getAmendedMobileNumber() != null && getAmendedMobileNumber().length() > 0 && !getAmendedMobileNumber().matches(NUMBERS_AND_SPACES_ONLY_<REGEX>)) {
+Line 310 -    if (!getAmendedEmailAddress().matches(EMAIL_<REGEX>)) {
+Line 316 -    if (!getAmendedEmailAddress().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)) {
+Line 316 -    if (!getAmendedEmailAddress().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)) {
+Found 11 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Servicing\src\com\lloydstsb\ssp\coa\servicing\jsf\mpb\CaptureKYCEmployerDetailsBean.java
+Line  16 - import com.lloydstsb.ssp.coa.common.constants.Validation<Regex>Constants;
+Line  64 -   if (!getEmployerName().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line  64 -   if (!getEmployerName().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line  69 -   if (!getAddress().getAddressLine1().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line  69 -   if (!getAddress().getAddressLine1().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line  74 -   if (!getAddress().getAddressLine2().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line  74 -   if (!getAddress().getAddressLine2().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line  79 -   if (!getAddress().getAddressLine3().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line  79 -   if (!getAddress().getAddressLine3().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line  84 -   if (!getAddress().getAddressLine4().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line  84 -   if (!getAddress().getAddressLine4().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line  89 -   if (!getAddress().getAddressLine5().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line  89 -   if (!getAddress().getAddressLine5().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line  94 -   if (!getAddress().getAddressLine6().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line  94 -   if (!getAddress().getAddressLine6().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line  99 -   if (!getAddress().getAddressLine7().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line  99 -   if (!getAddress().getAddressLine7().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line 108 -   } else if ( (!getPostCode().getOutCode().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)) 
+Line 108 -   } else if ( (!getPostCode().getOutCode().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)) 
+Line 109 -   || (!getPostCode().getInCode().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)) ) {
+Line 109 -   || (!getPostCode().getInCode().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)) ) {
+Found 21 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Servicing\src\com\lloydstsb\ssp\coa\servicing\jsf\mpb\CaptureKYCEmploymentDetailsBean.java
+Line   9 - import java.util.<regex>.Matcher;
+Line  10 - import java.util.<regex>.Pattern;
+Line  22 -  //private static final String <regex>Pattern =  "[[A-Z] || [a-z] || [^0-9] || [^.*\\.\\..*]]";
+Line  24 -  private static final String <regex>Pattern =  "[[A-Z] || [a-z] || [^0-9]]";
+Line 163 -   Pattern pattern = Pattern.compile(CaptureKYCEmploymentDetailsBean.<regex>Pattern);
+Found 5 occurrences.
+Processing file : D:\dev\workspaces\COA_SOURCE_CONTROL\dev_j2ee_coa\development\Source\java\Servicing\src\com\lloydstsb\ssp\coa\servicing\jsf\mpb\CaptureVerificationDetailsManagePageBean.java
+Line  41 - import com.lloydstsb.ssp.coa.common.constants.Validation<Regex>Constants;
+Line 172 -       if (!getEvidenceDetails().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line 172 -       if (!getEvidenceDetails().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line 236 -       if (getOtherOption().getFirstname() != null && !getOtherOption().getFirstname().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line 236 -       if (getOtherOption().getFirstname() != null && !getOtherOption().getFirstname().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Line 241 -       if (getOtherOption().getLastname() != null && !getOtherOption().getLastname().matches(Validation<Regex>Constants.INVALID_CHARS_REGEX)){
+Line 241 -       if (getOtherOption().getLastname() != null && !getOtherOption().getLastname().matches(ValidationRegexConstants.INVALID_CHARS_<REGEX>)){
+Found 7 occurrences.
+Searched 916 file(s), found 69 occurrences in 12 file(s)

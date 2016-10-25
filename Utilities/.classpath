@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="var" path="NEO9TESTING_JAR"/>
+	<classpathentry excluding="*/CVS" kind="src" path="src.utilities"/>
+	<classpathentry kind="src" path="test.utilities"/>
+	<classpathentry kind="src" path="test.setup"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

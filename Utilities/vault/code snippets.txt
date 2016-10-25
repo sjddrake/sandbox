@@ -1,0 +1,68 @@
+	public static boolean isMinor(ClientContext clientContext, PartyProductHoldingSetDTO partyProductHoldingSetDTO, Date dateOfBirth) {
+		logger.methodEntry();
+				
+		Vector				productHoldingVector	= null;
+		ProductHoldingDTO	productHolding			= null;
+		Integer				relatedMinorsAge		= null;
+		
+		String externalProductId = null;
+		
+		boolean retVal = false;
+		
+		relatedMinorsAge		= DateUtilities.getAge(dateOfBirth);
+		if ((!ValidationHelper.isEmpty(relatedMinorsAge)) &&
+			(HostConstants.ELEVEN_YEARS_OF_AGE.intValue() > relatedMinorsAge.intValue())) {
+			return true;			
+		}
+
+		/*
+		 * Does this minor have any products?
+		 */
+		productHoldingVector	= partyProductHoldingSetDTO.getProductHoldings();
+			
+		/*
+		 * start processing
+		 */
+		if (ValidationHelper.isEmpty(productHoldingVector)) {
+			return false;
+		}
+
+		/*
+		 * Search the product holdings
+		 * 
+		 */
+		for (Iterator productHoldingIterator = productHoldingVector.iterator(); productHoldingIterator.hasNext(); ) {
+			
+			productHolding = (ProductHoldingDTO) productHoldingIterator.next();
+			
+			if (ValidationHelper.isEmpty(productHolding)) {
+				continue;
+			}
+			
+			externalProductId = productHolding.getExternalProductId();
+			if (ValidationHelper.isEmpty(externalProductId)) {
+				continue;
+			}
+			
+			if ((externalProductId.trim().startsWith(HostConstants.UNDER_19_ACCOUNT_30604000)) ||
+				(externalProductId.trim().startsWith(HostConstants.UNDER_19_ACCOUNT_77604000)) ||
+				(externalProductId.trim().startsWith(HostConstants.UNDER_19_ACCOUNT_87604000)) ||
+				(externalProductId.trim().startsWith(HostConstants.UNDER_19_ACCOUNT_476024000))) {
+				return false;	
+			}
+
+			if ((externalProductId.trim().startsWith(HostConstants.YOUNG_SAVER_ACCOUNT_306039000)) ||
+				(externalProductId.trim().startsWith(HostConstants.YOUNG_SAVER_ACCOUNT_776039000)) ||
+				(externalProductId.trim().startsWith(HostConstants.YOUNG_SAVER_ACCOUNT_876039000)) ||
+				(externalProductId.trim().startsWith(HostConstants.YOUNG_SAVER_ACCOUNT_475007000)) ||
+				(externalProductId.trim().startsWith(HostConstants.YOUNG_SAVER_ACCOUNT_476017000)) ||
+				(externalProductId.trim().startsWith(HostConstants.YOUNG_SAVER_ACCOUNT_476020000)) ||
+				(externalProductId.trim().startsWith(HostConstants.YOUNG_SAVER_ACCOUNT_476027000))) {
+				retVal = true;	
+			}
+		}
+
+		logger.methodExit();
+
+		return retVal;
+	}

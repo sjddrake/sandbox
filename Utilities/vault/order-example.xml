@@ -1,0 +1,254 @@
+<soapenv:Envelope>
+ <soapenv:Header/>
+<soapenv:Body>
+<paf:SubmitOrderRequest>
+<paf:Header>
+ <typ:TransactionId>38981</typ:TransactionId>
+ <typ:UserId>Mde1</typ:UserId>
+ <typ:ApplicationId>CHORDIANT</typ:ApplicationId>
+ </paf:Header>
+<paf:Channel>
+ <typ:ChannelName>CHORDIANT</typ:ChannelName>
+ <typ:ChannelDescription>CHORDIANT</typ:ChannelDescription>
+ <typ:ChannelCode>CHORDIANT</typ:ChannelCode>
+ </paf:Channel>
+<paf:Order>
+ <ord:ID/>
+<ord:OrderReferenceIdentification>
+ <typ:IdentifyingEntity>CHORDIANT</typ:IdentifyingEntity>
+ <typ:ID>38981</typ:ID>
+ </ord:OrderReferenceIdentification>
+ <ord:OrderType>RETENTION</ord:OrderType>
+ <ord:OrderSubType>MOBILE</ord:OrderSubType>
+ <ord:OrderSource>CDN</ord:OrderSource>
+ <ord:IssueDate>2011-06-23+02:00</ord:IssueDate>
+ <ord:IssueTime>15:11:05.664+02:00</ord:IssueTime>
+<ord:BuyerCustomerParty>
+<ord:Party>
+ <typ:PartyType>E</typ:PartyType>
+ <typ:PartyClassCode>RETENTION</typ:PartyClassCode>
+ <typ:PartyCategoryCode>AAA</typ:PartyCategoryCode>
+<typ:PartyIdentification>
+ <typ:IdentifyingEntity>Gemini</typ:IdentifyingEntity>
+ <typ:ID>319307572</typ:ID>
+ </typ:PartyIdentification>
+<typ:PartyName>
+ <typ:LastName>MONDI and PACKAGING V.</typ:LastName>
+ </typ:PartyName>
+<typ:Address>
+ <typ:StreetName>Fort Willemweg</typ:StreetName>
+ <typ:HouseNumber>1</typ:HouseNumber>
+ <typ:City>MAASTRICHT</typ:City>
+ <typ:PostalCode>6219PA</typ:PostalCode>
+<typ:Country>
+ <typ:Code>NLD</typ:Code>
+ </typ:Country>
+ </typ:Address>
+<typ:Contact>
+ <typ:Name/>
+ <typ:Telephone/>
+ <typ:EMail>gfdgf@gfdgfd.bom</typ:EMail>
+ <typ:Organization>MONDI and PACKAGING V.</typ:Organization>
+ </typ:Contact>
+ </ord:Party>
+ </ord:BuyerCustomerParty>
+<ord:SellerSupplierParty>
+<ord:Channel>
+ <typ:Code>CHORDIANT</typ:Code>
+ <typ:Name>CHORDIANT</typ:Name>
+ <typ:Type>I</typ:Type>
+ </ord:Channel>
+<ord:Dealer>
+ <typ:Code>gfdgf</typ:Code>
+ <typ:Type>TELESALES</typ:Type>
+ </ord:Dealer>
+<ord:SalesPerson>
+ <typ:ID>Mde1</typ:ID>
+ </ord:SalesPerson>
+<ord:SalesProcessor>
+ <typ:ID>990011</typ:ID>
+ </ord:SalesProcessor>
+<ord:SalesRepresentative>
+ <typ:ID>Mde1</typ:ID>
+ </ord:SalesRepresentative>
+<ord:AdditionalContact>
+ <typ:ContactType>DEALER</typ:ContactType>
+ </ord:AdditionalContact>
+ </ord:SellerSupplierParty>
+<ord:Delivery>
+<typ:DeliveryAddress>
+ <typ:StreetName>fdgfdgf</typ:StreetName>
+ <typ:AdditionalStreetName>dsgfd</typ:AdditionalStreetName>
+ <typ:HouseNumber>fdsgfd</typ:HouseNumber>
+ <typ:AdditionalHouseNumber>gfdsg</typ:AdditionalHouseNumber>
+ <typ:City>sgfds</typ:City>
+ <typ:PostalCode>fdsgfdgf</typ:PostalCode>
+<typ:Country>
+ <typ:Code>UK</typ:Code>
+ </typ:Country>
+ </typ:DeliveryAddress>
+<typ:DeliveryContact>
+<typ:Name>
+ <typ:Title>gfdsg</typ:Title>
+ <typ:FirstName>gfd</typ:FirstName>
+ <typ:MiddleName>f</typ:MiddleName>
+ <typ:LastName>gfdsgfds</typ:LastName>
+ </typ:Name>
+ <typ:Telephone/>
+ <typ:Organization>gfdsg</typ:Organization>
+ </typ:DeliveryContact>
+ </ord:Delivery>
+<ord:PaymentMeans>
+ <typ:PaymentMeansCode>DD</typ:PaymentMeansCode>
+ </ord:PaymentMeans>
+<ord:OrderProperty>
+ <typ:Name>EBS-SALES-CHANNEL</typ:Name>
+ <typ:Value>TELESALES ENTERPRISE</typ:Value>
+ </ord:OrderProperty>
+<ord:OrderLine>
+ <ord:LineNumber>1</ord:LineNumber>
+ <ord:OrderLineType>RETENTION</ord:OrderLineType>
+ <ord:OrderLineSubType>MOBILE</ord:OrderLineSubType>
+<ord:LineItem>
+ <ord:ID>1</ord:ID>
+ <ord:Quantity>1</ord:Quantity>
+ <ord:LineExtensionAmount>192.44</ord:LineExtensionAmount>
+ <ord:TotalTaxAmount>36.5636</ord:TotalTaxAmount>
+<ord:Item>
+ <typ:Name>Apple iPhone4 BLK 16GB VF, MC603DN/B</typ:Name>
+ <typ:Description>Apple iPhone4 BLK 16GB VF, MC603DN/B</typ:Description>
+ <typ:AdditionalInformation>Apple iPhone4 BLK 16GB VF, MC603DN/B</typ:AdditionalInformation>
+<typ:SellersItemIdentification>
+ <typ:ID>4756096</typ:ID>
+<typ:IssuerParty>
+<typ:PartyIdentification>
+ <typ:ID>WMS</typ:ID>
+ </typ:PartyIdentification>
+ </typ:IssuerParty>
+ </typ:SellersItemIdentification>
+<typ:CatalogueItemIdentification>
+ <typ:ID>4756096_8</typ:ID>
+ </typ:CatalogueItemIdentification>
+<typ:CommodityClassification>
+ <typ:NatureCode>HARDWARE</typ:NatureCode>
+ <typ:Category>H</typ:Category>
+ </typ:CommodityClassification>
+<typ:ItemAction>
+ <typ:ReasonCode/>
+<typ:AgentParty>
+<typ:PartyIdentification>
+ <typ:ID>gfdgf</typ:ID>
+ </typ:PartyIdentification>
+ </typ:AgentParty>
+ </typ:ItemAction>
+<typ:Price>
+ <typ:PriceAmount>192.44</typ:PriceAmount>
+<typ:TaxAmount>
+ <typ:Description>BTW</typ:Description>
+ <typ:Amount>36.5636</typ:Amount>
+ <typ:Percentage>19.0</typ:Percentage>
+ </typ:TaxAmount>
+ </typ:Price>
+<typ:InventoryItem>
+ <typ:MSISDN>31611347367</typ:MSISDN>
+ </typ:InventoryItem>
+<typ:SubscriptionItem>
+ <typ:MSISDN>31611347367</typ:MSISDN>
+ </typ:SubscriptionItem>
+ </ord:Item>
+ </ord:LineItem>
+ </ord:OrderLine>
+<ord:OrderLine>
+ <ord:LineNumber>2</ord:LineNumber>
+ <ord:OrderLineType>RETENTION</ord:OrderLineType>
+ <ord:OrderLineSubType>MOBILE</ord:OrderLineSubType>
+<ord:LineItem>
+ <ord:ID>2</ord:ID>
+ <ord:Quantity>1</ord:Quantity>
+<ord:Item>
+ <typ:Name>iPhone 150_ (24)</typ:Name>
+ <typ:Description>iPhone 150_ (24)</typ:Description>
+ <typ:AdditionalInformation>iPhone 150_ (24)</typ:AdditionalInformation>
+<typ:SellersItemIdentification>
+ <typ:ID>26IP02950</typ:ID>
+<typ:IssuerParty>
+<typ:PartyIdentification>
+ <typ:ID>Gemini</typ:ID>
+ </typ:PartyIdentification>
+ </typ:IssuerParty>
+ </typ:SellersItemIdentification>
+<typ:CatalogueItemIdentification>
+ <typ:ID>23564_148249</typ:ID>
+ </typ:CatalogueItemIdentification>
+<typ:CommodityClassification>
+ <typ:NatureCode>PRICE-PLAN</typ:NatureCode>
+ </typ:CommodityClassification>
+<typ:ItemAction>
+ <typ:Code>CONNECT</typ:Code>
+ <typ:ReasonCode>UPG</typ:ReasonCode>
+<typ:AgentParty>
+<typ:PartyIdentification>
+ <typ:ID>gfdgf</typ:ID>
+ </typ:PartyIdentification>
+ </typ:AgentParty>
+ </typ:ItemAction>
+<typ:InventoryItem>
+ <typ:MSISDN>31611347367</typ:MSISDN>
+ </typ:InventoryItem>
+<typ:SubscriptionItem>
+ <typ:MSISDN>31611347367</typ:MSISDN>
+ </typ:SubscriptionItem>
+ </ord:Item>
+ </ord:LineItem>
+ </ord:OrderLine>
+<ord:OrderLine>
+ <ord:LineNumber>3</ord:LineNumber>
+ <ord:OrderLineType>RETENTION</ord:OrderLineType>
+ <ord:OrderLineSubType>MOBILE</ord:OrderLineSubType>
+<ord:LineItem>
+ <ord:ID>3</ord:ID>
+ <ord:Quantity>1</ord:Quantity>
+<ord:Item>
+ <typ:Name>iPhone 150_ (24)</typ:Name>
+ <typ:Description>iPhone 150_ (24)</typ:Description>
+ <typ:AdditionalInformation>iPhone 150_ (24)</typ:AdditionalInformation>
+<typ:SellersItemIdentification>
+ <typ:ID/>
+<typ:IssuerParty>
+<typ:PartyIdentification>
+ <typ:ID/>
+ </typ:PartyIdentification>
+ </typ:IssuerParty>
+ </typ:SellersItemIdentification>
+<typ:CatalogueItemIdentification>
+ <typ:ID>23564_148249</typ:ID>
+ </typ:CatalogueItemIdentification>
+<typ:CommodityClassification>
+ <typ:NatureCode>COMMITMENT</typ:NatureCode>
+ </typ:CommodityClassification>
+<typ:ItemAction>
+ <typ:Code>CONNECT</typ:Code>
+ <typ:ReasonCode>E000</typ:ReasonCode>
+<typ:AgentParty>
+<typ:PartyIdentification>
+ <typ:ID>gfdgf</typ:ID>
+ </typ:PartyIdentification>
+ </typ:AgentParty>
+ </typ:ItemAction>
+<typ:InventoryItem>
+ <typ:MSISDN>31611347367</typ:MSISDN>
+ </typ:InventoryItem>
+<typ:SubscriptionItem>
+ <typ:MSISDN>31611347367</typ:MSISDN>
+ <typ:CommitmentPeriod>24</typ:CommitmentPeriod>
+<typ:Agreement>
+ <typ:Reason>EQU</typ:Reason>
+ </typ:Agreement>
+ </typ:SubscriptionItem>
+ </ord:Item>
+ </ord:LineItem>
+ </ord:OrderLine>
+ </paf:Order>
+ </paf:SubmitOrderRequest>
+ </soapenv:Body>
+ </soapenv:Envelope>

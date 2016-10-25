@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Utilties Test" default="Main Build" basedir=".">
+
+	<property name="bin" location="bin"/>
+	<property name="src" location="."/>
+	<property name="jardir" location="${bin}/lib"/>
+	<property name="jarfile" location="${jardir}/PalmContactWindow.jar"/>
+	<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+	
+
+	<target name="Main Build" depends="Initialize,Compile"><!--,Jar"-->
+		<echo message="Ant at work!"/>
+	</target>
+
+	<target name="Initialize">
+		<!--delete dir="${bin}"/>
+		<delete dir="${jardir}"/>
+		<mkdir dir="${bin}"/>
+		<mkdir dir="${jardir}"/-->
+	</target>
+
+	<target name="Compile" depends="Initialize">
+		<javac srcdir="${src}" destdir="${bin}">
+			<classpath >
+			    <pathelement path="C:/Program Files/eclipse/plugins/org.eclipse.jface_2.1.1/jface.jar"/>
+			    <pathelement path="C:/Program Files/eclipse/plugins/org.eclipse.swt.win32_2.1.1/ws/win32/swt.jar"/>
+			    <pathelement path="C:/Program Files/eclipse/plugins/org.eclipse.core.runtime_2.1.1/runtime.jar"/>
+			    <pathelement path="C:/Program Files/eclipse/plugins/org.eclipse.ui.workbench_2.1.1/workbench.jar"/>
+			    <pathelement path="C:/Program Files/eclipse/plugins/org.eclipse.core.boot_2.1.1/boot.jar"/>
+				<pathelement path="C:/Simonz/DEV/Java/lib/xerces/xmlParserAPIs.jar" /> 
+				<pathelement path="C:/Simonz/DEV/Java/lib/xerces/xercesImpl.jar" /> 				  
+			</classpath>
+		</javac>
+	</target>
+
+	<!--target name="Jar" depends="Initialize,Compile">
+		<jar destfile="${jarfile}" basedir="${bin}"/>
+	</target-->
+</project>
