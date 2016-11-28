@@ -7,6 +7,9 @@ node {
      // Mark the code checkout 'build'.... 
      stage 'Build'      
      def mvnHome = tool 'Maven 3.3.9'
-     sh "cd ./mvn-sandbox/sandbox"
-     sh "${mvnHome}/bin/mvn -B verify"
+     dir('./mvn-sandbox/sandbox') {
+          def dir = pwd() echo dir 
+          sh "${mvnHome}/bin/mvn -B verify"
+     } 
+     
   }
