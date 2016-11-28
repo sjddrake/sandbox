@@ -1,7 +1,6 @@
 #!groovy
- node {
-  stage 'Build and Test'
-  env.PATH = "${tool 'Maven 3'}/bin:${env.PATH}"
-  git url: "https://github.com/sjddrake/sandbox/tree/master/mvn-sandbox/sandbox"
-  sh 'mvn clean package'
- }
+node {
+     git url: "https://github.com/sjddrake/sandbox/tree/master/mvn-sandbox/sandbox"
+     def mvnHome = tool 'M3'
+     sh "${mvnHome}/bin/mvn -B verify"
+  }
