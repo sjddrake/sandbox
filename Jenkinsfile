@@ -8,7 +8,6 @@ node {
      stage 'Build'      
      def mvnHome = tool 'Maven 3.3.9'
      dir('./mvn-sandbox/sandbox') {
-          def dir = pwd() echo dir 
           sh "${mvnHome}/bin/mvn -B verify"
      } 
      
